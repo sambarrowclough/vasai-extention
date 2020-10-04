@@ -1,0 +1,124 @@
+﻿ <!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap" rel="stylesheet">
+<style>
+* {
+  -webkit-user-select: none;
+  -user-select: none;
+  -webkit-user-drag: none;
+  -user-drag: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: white;
+  font-family: 'Prompt', sans-serif;
+  font-size: 1em;
+  overflow: hidden;
+}
+
+body {
+	display:flex;
+	flex-direction:column;
+  width: 200px;
+  height: 200px;
+	padding:10px;
+	background: #ff6565;
+}
+
+#recc{
+  display:flex;
+	flex-direction:column;
+	margin: 0 auto;
+  justify-content: flex-end;
+}
+
+#rec {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+		border: 7px solid #fff;
+    position: relative;
+    cursor: pointer;
+    position: fixed;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+#in {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ff6565;
+		position: ABSOLUTE;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.icon {
+  position: relative;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  
+  margin: 25px 0 25px 25px;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+.icon:after {
+  animation: shine 5s ease-in-out  infinite;
+  animation-fill-mode: forwards;  
+  content: "";
+  position: absolute;
+  top: -110%;
+  left: -210%;
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right, 
+    rgba(128, 128, 128, 0.13) 0%,
+    rgba(128, 128, 128, 0.13) 77%,
+    rgba(128, 128, 128, 0.5) 92%,
+    rgba(128, 128, 128, 0.0) 100%
+  );
+}
+
+.shortcut {
+  padding: 8px;
+  color: #ffb4b4;
+  font-size: 14px;
+  text-align: center;
+  background: #ee6262;
+  border-radius: 4px;
+  margin-top: 6px;
+}
+</style>
+<title>vasai</title>
+</head>
+<body>
+<div id="recc">
+  <div id="rec"> 
+		<div id=" in"> 
+		</div>
+	</div> 
+  <p class="shortcut">ctrl+shift+r to start/stop</p>
+	<script src="dropdown.js"></script>
+</body>
+</html>
